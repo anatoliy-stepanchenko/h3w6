@@ -87,8 +87,7 @@ class Library {
 	}
 
 	deleteBook(name) {
-		const inx = this.books.findIndex((book) => book.name === name);
-		this.books.splice(inx, 1);
+		this.books = this.books.filter(book => book.name !== name);
 	}
 
 	sortBooksByYear() {
